@@ -21,6 +21,13 @@ class EncoderTest extends PHPUnit_Framework_TestCase
         $this->assertEquals('hello^M^Jworld^M^J', $this->encoder->encode("hello\r\nworld\r\n"));
     }
 
+    public function testLineBreaksOnWhitelist()
+    {
+        $encoder = new Encoder("\r\n");
+
+        $this->assertEquals("hello\r\nworld^@", $encoder->encode("hello\r\nworld\0"));
+    }
+
     public function testUtf8DoesNotChange()
     {
         $this->assertEquals('öäü', $this->encoder->encode('öäü'));

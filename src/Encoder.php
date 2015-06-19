@@ -41,6 +41,18 @@ class Encoder
     );
 
     /**
+     * instantiate new Encoder, optional accepts a whitelist of characters that will be left as-is
+     *
+     * @param string $whitelist (optional) whitelist of characters that will be left as-is
+     */
+    public function __construct($whitelist = '')
+    {
+        foreach (str_split($whitelist) as $char) {
+            unset($this->map[$char]);
+        }
+    }
+
+    /**
      * replace ASCII control codes with caret notation
      *
      * @param string $message "hello\nworld\0"
