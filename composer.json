@@ -1,0 +1,19 @@
+{
+    "name": "clue/caret-notation",
+    "description": "^B A dead-simple PHP library to add caret notation in order to safely show strings that contain ASCII control characters (unprintable characters)",
+    "keywords": ["caret notation", "ascii", "control characters", "binary", "hexdump", "encoding"],
+    "homepage": "https://github.com/clue/php-caret-notation",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Christian Lück",
+            "email": "christian@lueck.tv"
+        }
+    ],
+    "autoload": {
+        "psr-4": { "Clue\\CaretNotation\\": "src/" }
+    },
+    "require": {
+        "php": ">=5.3"
+    }
+}
