@@ -48,7 +48,7 @@ class EncoderTest extends PHPUnit_Framework_TestCase
         $this->assertEquals('^' . $letter, $this->encoder->encode(chr($char)));
     }
 
-    public function testA()
+    public function testRemainingControlCharacters()
     {
         $this->assertEquals('^@' . '^[' . '^\\' . '^]' . '^^' . '^_' . '^?', $this->encoder->encode("\x00\x1B\x1C\x1D\x1E\x1F\x7F"));
     }
