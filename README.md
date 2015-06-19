@@ -5,8 +5,6 @@ in order to safely show strings that contain
 [ASCII control characters](https://en.wikipedia.org/wiki/Control_character#In_ASCII)
 (unprintable characters) 
 
-> Note: This project is in beta stage! Feel free to report any issues you encounter.
-
 ## Quickstart example
 
 Once [installed](#install), you can use the following code to use caret notation
@@ -31,7 +29,7 @@ The recommended way to install this library is [through composer](http://getcomp
 ```JSON
 {
     "require": {
-        "clue/caret-notation": "~0.1.0"
+        "clue/caret-notation": "~0.2.0"
     }
 }
 ```
